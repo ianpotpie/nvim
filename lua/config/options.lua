@@ -10,10 +10,3 @@ vim.opt.tabstop = 2
 vim.opt.shiftwidth = 2
 vim.opt.clipboard = 'unnamedplus'
 
--- vim.cmd([[set number]])
--- vim.cmd([[set nowrap]])
--- vim.cmd([[set linebreak]])
--- vim.cmd([[set tabstop=2]])
--- vim.cmd([[set shiftwidth=2]])
-
-print("config and packages finished loading")
