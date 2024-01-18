@@ -1,23 +1,39 @@
+local map = vim.keymap.set
+
 -- setting the leader key
-vim.g.mapleader = ' '
+map("", "<Space>", "<Nop>")
+vim.g.mapleader = " "
+vim.g.maplocalleader = " "
+
+-- Resize with arrows
+map("n", "<C-Up>", ":resize -2<CR>", opts)
+map("n", "<C-Down>", ":resize +2<CR>", opts)
+map("n", "<C-Left>", ":vertical resize -2<CR>", opts)
+map("n", "<C-Right>", ":vertical resize +2<CR>", opts)
+
+-- Navigate buffers
+map("n", "<S-l>", ":bnext<CR>", opts)
+map("n", "<S-h>", ":bprevious<CR>", opts)
 
 -- general keymapping
-vim.keymap.set('i', 'jk', '<ESC>')
-vim.keymap.set('n', '<leader>term', ':term<CR>i')
-vim.keymap.set('n', '<leader>wrap', ':set wrap!<CR>')
-vim.keymap.set('n', '<leader>spell', ':set spell!<CR>')
-vim.keymap.set('n', '<leader>relative', ':set relativenumber!<CR>')
+map('i', 'jk', '<ESC>')
+map('n', '<leader>term', ':term<CR>i')
+map('n', '<leader>wrap', ':set wrap!<CR>')
+map('n', '<leader>spell', ':set spell!<CR>')
+map('n', '<leader>relative', ':set relativenumber!<CR>')
 
 -- keymappings for telescope
-vim.keymap.set('n', '<leader>ff', ':Telescope find_files<CR>', {})
-vim.keymap.set('n', '<leader>grep', ':Telescope live_grep<CR>', {})
-vim.keymap.set('n', '<leader>fb', ':Telescope buffers<CR>', {})
-vim.keymap.set('n', '<leader>help', ':Telescope help_tags<CR>', {})
-vim.keymap.set('n', '<leader>regs', ':Telescope registers<CR>', {})
+map('n', '<leader>ff', ':Telescope find_files<CR>', {})
+map('n', '<leader>grep', ':Telescope live_grep<CR>', {})
+map('n', '<leader>fb', ':Telescope buffers<CR>', {})
+map('n', '<leader>help', ':Telescope help_tags<CR>', {})
+map('n', '<leader>regs', ':Telescope registers<CR>', {})
 
 -- keymappings for nvim-tree
-vim.keymap.set('n', '<leader>tt', ':NvimTreeToggle<CR>')
-vim.keymap.set('n', '<leader>tf', ':NvimTreeFindFile<CR>')
-vim.keymap.set('n', '<leader>tc', ':NvimTreeCollapse<CR>') 
-vim.keymap.set('n', '<leader>tk', ':NvimTreeCollapseKeepBuffers<CR>')
+map('n', '<leader>tt', ':NvimTreeToggle<CR>')
+map('n', '<leader>tf', ':NvimTreeFindFile<CR>')
+map('n', '<leader>tc', ':NvimTreeCollapse<CR>') 
+map('n', '<leader>tk', ':NvimTreeCollapseKeepBuffers<CR>')
 
+-- quickly close the terminal
+map('t', '<ESC>', '<C-\\><C-N>:q<CR>')
