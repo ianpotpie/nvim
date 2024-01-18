@@ -10,10 +10,10 @@ vim.keymap.set('n', '<leader>relative', ':set relativenumber!<CR>')
 
 -- keymappings for telescope
 vim.keymap.set('n', '<leader>ff', ':Telescope find_files<CR>', {})
-vim.keymap.set('n', '<leader>fg', ':Telescope live_grep<CR>', {})
+vim.keymap.set('n', '<leader>grep', ':Telescope live_grep<CR>', {})
 vim.keymap.set('n', '<leader>fb', ':Telescope buffers<CR>', {})
-vim.keymap.set('n', '<leader>fh', ':Telescope help_tags<CR>', {})
-vim.keymap.set('n', '<leader>r', ':Telescope registers<CR>', {})
+vim.keymap.set('n', '<leader>help', ':Telescope help_tags<CR>', {})
+vim.keymap.set('n', '<leader>regs', ':Telescope registers<CR>', {})
 
 -- keymappings for nvim-tree
 vim.keymap.set('n', '<leader>tt', ':NvimTreeToggle<CR>')
