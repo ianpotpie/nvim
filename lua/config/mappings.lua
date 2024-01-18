@@ -15,6 +15,10 @@ map("n", "<C-Right>", ":vertical resize +2<CR>", opts)
 map("n", "<S-l>", ":bnext<CR>", opts)
 map("n", "<S-h>", ":bprevious<CR>", opts)
 
+-- Remap for dealing with word wrap
+vim.keymap.set('n', 'k', "v:count == 0 ? 'gk' : 'k'", { expr = true, silent = true })
+vim.keymap.set('n', 'j', "v:count == 0 ? 'gj' : 'j'", { expr = true, silent = true })
+
 -- general keymapping
 map('i', 'jk', '<ESC>')
 map('n', '<leader>term', ':term<CR>i')
