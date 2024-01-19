@@ -94,6 +94,7 @@ cmp.setup {
       vim_item.kind = string.format("%s", kind_icons[vim_item.kind])
       -- vim_item.kind = string.format('%s %s', kind_icons[vim_item.kind], vim_item.kind) -- This concatonates the icons with the name of the item kind
       vim_item.menu = ({
+				nvim_lsp = "[LSP]",
         luasnip = "[Snippet]",
         buffer = "[Buffer]",
         path = "[Path]",
@@ -103,7 +104,8 @@ cmp.setup {
     end,
   },
   sources = {
-    { name = "luasnip" },
+		{ name = "nvim_lsp"},
+		{ name = "luasnip" },
     { name = "buffer" },
     { name = "path" }
   },
@@ -137,3 +139,15 @@ cmp.setup.cmdline('/', {
 		{ name = 'buffer' }
 	}
 })
+
+-- Setup lspconfig.
+local lspconfig = require("lspconfig")
+local capabilities = require('cmp_nvim_lsp').default_capabilities()
+lspconfig.tsserver.setup {
+	capabilities = capabilities
+}
+lspconfig.lua_ls.setup {
+	capabilities = capabilities
+}
+
+vim.lsp.set_log_level('debug')
