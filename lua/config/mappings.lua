@@ -39,5 +39,5 @@ map('n', '<leader>tf', ':NvimTreeFindFile<CR>')
 map('n', '<leader>tc', ':NvimTreeCollapse<CR>')
 map('n', '<leader>tk', ':NvimTreeCollapseKeepBuffers<CR>')
 
--- quickly close the terminal
-map('t', '<ESC>', '<C-\\><C-N>:q<CR>')
+-- quickly exit insert mode in the terminal
+map('t', '<ESC>', '<C-\\><C-N>')
