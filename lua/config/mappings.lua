@@ -6,14 +6,14 @@ vim.g.mapleader = " "
 vim.g.maplocalleader = " "
 
 -- Resize with arrows
-map("n", "<C-Up>", ":resize -2<CR>", opts)
-map("n", "<C-Down>", ":resize +2<CR>", opts)
-map("n", "<C-Left>", ":vertical resize -2<CR>", opts)
-map("n", "<C-Right>", ":vertical resize +2<CR>", opts)
+map("n", "<C-Up>", ":resize -2<CR>")
+map("n", "<C-Down>", ":resize +2<CR>")
+map("n", "<C-Left>", ":vertical resize -2<CR>")
+map("n", "<C-Right>", ":vertical resize +2<CR>")
 
 -- Navigate buffers
-map("n", "<S-l>", ":bnext<CR>", opts)
-map("n", "<S-h>", ":bprevious<CR>", opts)
+map("n", "<S-l>", ":bnext<CR>")
+map("n", "<S-h>", ":bprevious<CR>")
 
 -- Remap for dealing with word wrap
 vim.keymap.set('n', 'k', "v:count == 0 ? 'gk' : 'k'", { expr = true, silent = true })
@@ -36,7 +36,7 @@ map('n', '<leader>regs', ':Telescope registers<CR>', {})
 -- keymappings for nvim-tree
 map('n', '<leader>tt', ':NvimTreeToggle<CR>')
 map('n', '<leader>tf', ':NvimTreeFindFile<CR>')
-map('n', '<leader>tc', ':NvimTreeCollapse<CR>') 
+map('n', '<leader>tc', ':NvimTreeCollapse<CR>')
 map('n', '<leader>tk', ':NvimTreeCollapseKeepBuffers<CR>')
 
 -- quickly close the terminal
