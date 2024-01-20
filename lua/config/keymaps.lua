@@ -19,6 +19,9 @@ map("n", "<S-h>", ":bprevious<CR>")
 vim.keymap.set("n", "k", "v:count == 0 ? 'gk' : 'k'", { expr = true, silent = true })
 vim.keymap.set("n", "j", "v:count == 0 ? 'gj' : 'j'", { expr = true, silent = true })
 
+-- Escape to clear highlights
+map("n", "<ESC>", ":noh<CR>")
+
 -- general keymapping
 map("i", "jk", "<ESC>")
 map("n", "<leader>term", ":term<CR>i")
