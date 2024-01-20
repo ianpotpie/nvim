@@ -16,21 +16,15 @@ map("n", "<S-l>", ":bnext<CR>")
 map("n", "<S-h>", ":bprevious<CR>")
 
 -- Remap for dealing with word wrap
-vim.keymap.set('n', 'k', "v:count == 0 ? 'gk' : 'k'", { expr = true, silent = true })
-vim.keymap.set('n', 'j', "v:count == 0 ? 'gj' : 'j'", { expr = true, silent = true })
+vim.keymap.set("n", "k", "v:count == 0 ? 'gk' : 'k'", { expr = true, silent = true })
+vim.keymap.set("n", "j", "v:count == 0 ? 'gj' : 'j'", { expr = true, silent = true })
 
 -- general keymapping
-map('i', 'jk', '<ESC>')
-map('n', '<leader>term', ':term<CR>i')
-map('n', '<leader>wrap', ':set wrap!<CR>')
-map('n', '<leader>spell', ':set spell!<CR>')
-map('n', '<leader>relative', ':set relativenumber!<CR>')
-
--- keymappings for nvim-tree
-map('n', '<leader>tt', ':NvimTreeToggle<CR>')
-map('n', '<leader>tf', ':NvimTreeFindFile<CR>')
-map('n', '<leader>tc', ':NvimTreeCollapse<CR>')
-map('n', '<leader>tk', ':NvimTreeCollapseKeepBuffers<CR>')
+map("i", "jk", "<ESC>")
+map("n", "<leader>term", ":term<CR>i")
+map("n", "<leader>wrap", ":set wrap!<CR>")
+map("n", "<leader>spell", ":set spell!<CR>")
+map("n", "<leader>relative", ":set relativenumber!<CR>")
 
 -- quickly exit insert mode in the terminal
-map('t', '<ESC>', '<C-\\><C-N>')
+map("t", "<ESC>", "<C-\\><C-N>")
