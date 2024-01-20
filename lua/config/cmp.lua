@@ -143,11 +143,14 @@ cmp.setup.cmdline('/', {
 -- Setup lspconfig.
 local lspconfig = require("lspconfig")
 local capabilities = require('cmp_nvim_lsp').default_capabilities()
-lspconfig.tsserver.setup {
+lspconfig.tsserver.setup({
 	capabilities = capabilities
-}
-lspconfig.lua_ls.setup {
+})
+lspconfig.lua_ls.setup({
 	capabilities = capabilities
-}
+})
 
-vim.lsp.set_log_level('debug')
+
+lspconfig.pylsp.setup({
+	capabilities = capabilities
+})
