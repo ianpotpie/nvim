@@ -26,13 +26,6 @@ map('n', '<leader>wrap', ':set wrap!<CR>')
 map('n', '<leader>spell', ':set spell!<CR>')
 map('n', '<leader>relative', ':set relativenumber!<CR>')
 
--- keymappings for telescope
-map('n', '<leader>ff', ':Telescope find_files<CR>', {})
-map('n', '<leader>grep', ':Telescope live_grep<CR>', {})
-map('n', '<leader>fb', ':Telescope buffers<CR>', {})
-map('n', '<leader>help', ':Telescope help_tags<CR>', {})
-map('n', '<leader>regs', ':Telescope registers<CR>', {})
-
 -- keymappings for nvim-tree
 map('n', '<leader>tt', ':NvimTreeToggle<CR>')
 map('n', '<leader>tf', ':NvimTreeFindFile<CR>')

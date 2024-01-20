@@ -9,22 +9,29 @@ return {
 	},
 	config = function()
 		local telescope = require('telescope')
-		local actions = require('telescope.actions')
+		local builtin = require('telescope.builtin')
 
-		telescope.setup{
+		vim.keymap.set('n', '<leader>ff', builtin.find_files, {})
+		vim.keymap.set('n', '<leader>fg', builtin.live_grep, {})
+		vim.keymap.set('n', '<leader>fb', builtin.buffers, {})
+		vim.keymap.set('n', '<leader>fh', builtin.help_tags, {})
+		vim.keymap.set('n', '<leader>fr', builtin.registers, {})
+
+		telescope.setup {
 			defaults = {
 				mappings = {
-					i = {
-						["<esc>"] = actions.close
-					},
+					-- add mapping just for telescope here
 				},
 			},
 			pickers = {
 				find_files = {
-					hidden = true,
-					theme = "dropdown",
-					cwd = vim.fn.getcwd(), -- This sets the working directory to the current directory
+					hidden = false,
+					theme = "dropdown"
 				},
+				live_grep = {
+					hidden = false,
+					theme = "dropdown"
+				}
 			},
 			extensions = {
 				-- Your extensions configuration here
@@ -32,4 +39,3 @@ return {
 		}
 	end
 }
-
