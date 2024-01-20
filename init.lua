@@ -1,5 +1,3 @@
 require("config.keymaps")
 require("config.lazy")
 require("config.options")
-require("config.cmp")
-require("config.lua_ls")

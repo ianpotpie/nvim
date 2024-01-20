@@ -28,6 +28,7 @@ return {
 				"cssls",
 				"lua_ls",
 				"pylsp",
+				"emmet_ls",
 			},
 			automatic_installation = true,
 		})

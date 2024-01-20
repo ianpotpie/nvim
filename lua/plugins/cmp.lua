@@ -149,30 +149,5 @@ return {
 				{ name = "buffer" },
 			},
 		})
-
-		-- Setup lspconfig.
-		local lspconfig = require("lspconfig")
-		local capabilities = require("cmp_nvim_lsp").default_capabilities()
-		capabilities.textDocument.completion.completionItem.snippetSupport = true
-
-		lspconfig.html.setup({
-			capabilities = capabilities,
-		})
-
-		lspconfig.cssls.setup({
-			capabilities = capabilities,
-		})
-
-		lspconfig.tsserver.setup({
-			capabilities = capabilities,
-		})
-
-		lspconfig.lua_ls.setup({
-			capabilities = capabilities,
-		})
-
-		lspconfig.pylsp.setup({
-			capabilities = capabilities,
-		})
 	end,
 }
