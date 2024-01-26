@@ -44,13 +44,15 @@ return {
 			},
 		})
 
-		lspconfig.tsserver.setup({})
+		lspconfig["texlab"].setup({})
 
-		lspconfig.html.setup({})
+		lspconfig["tsserver"].setup({})
 
-		lspconfig.cssls.setup({})
+		lspconfig["html"].setup({})
 
-		lspconfig.pylsp.setup({
+		lspconfig["cssls"].setup({})
+
+		lspconfig["pylsp"].setup({
 			settings = {
 				pylsp = {
 					plugins = {
