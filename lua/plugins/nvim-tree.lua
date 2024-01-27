@@ -6,7 +6,18 @@ return {
 		"nvim-tree/nvim-web-devicons",
 	},
 	config = function()
-		require("nvim-tree").setup()
+		local tree = require("nvim-tree")
+		tree.setup({
+			view = {
+				preserve_window_proportions = true,
+				---
+			},
+			actions = {
+				open_file = {
+					resize_window = true,
+				},
+			},
+		})
 
 		-- disable netrw at the very start of your init.lua
 		vim.g.loaded_netrw = 1
