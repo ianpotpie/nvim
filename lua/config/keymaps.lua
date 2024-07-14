@@ -39,13 +39,13 @@ map("n", "<ESC>", ":noh<CR>", opts)
 
 -- general keymapping
 opts.desc = "Open terminal"
-map("n", "<leader>term", ":term<CR>i", opts)
+map("n", "<leader>trm", ":term<CR>i", opts)
 
 opts.desc = "Toggle line wrap"
-map("n", "<leader>wrap", ":set wrap!<CR>", opts)
+map("n", "<leader>wrp", ":set wrap!<CR>", opts)
 
 opts.desc = "Toggle the vim builtin spell-checker"
-map("n", "<leader>spell", ":set spell!<CR>", opts)
+map("n", "<leader>spl", ":set spell!<CR>", opts)
 
 opts.desc = "Toggle relative line numbering"
 map("n", "<leader>relative", ":set relativenumber!<CR>", opts)
