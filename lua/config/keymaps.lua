@@ -39,16 +39,16 @@ map("n", "<ESC>", ":noh<CR>", opts)
 
 -- general keymapping
 opts.desc = "Open terminal"
-map("n", "<leader>trm", ":term<CR>i", opts)
+map("n", "<leader>tm", ":term<CR>i", opts)
 
 opts.desc = "Toggle line wrap"
-map("n", "<leader>wrp", ":set wrap!<CR>", opts)
+map("n", "<leader>wp", ":set wrap!<CR>", opts)
 
 opts.desc = "Toggle the vim builtin spell-checker"
-map("n", "<leader>spl", ":set spell!<CR>", opts)
+map("n", "<leader>sp", ":set spell!<CR>", opts)
 
 opts.desc = "Toggle relative line numbering"
-map("n", "<leader>relative", ":set relativenumber!<CR>", opts)
+map("n", "<leader>rn", ":set relativenumber!<CR>", opts)
 
 opts.desc = "Delete the buffer while keeping the window open"
 map("n", "<leader>bd", ":bnext<CR>:bdelete #<CR>", opts)
@@ -56,3 +56,7 @@ map("n", "<leader>bd", ":bnext<CR>:bdelete #<CR>", opts)
 -- quickly exit insert mode in the terminal
 opts.desc = "Exit the terminal with <ESC>"
 map("t", "<ESC>", "<ESC><C-\\><C-N>", opts)
+
+-- Copilot keymapping
+opts.desc = "Toggle Copilot Auto-Trigger"
+map("n", "<leader>cp", ":lua require('copilot.suggestion').toggle_auto_trigger()<CR>", opts)
