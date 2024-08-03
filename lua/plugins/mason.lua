@@ -27,7 +27,7 @@ return {
 				"html",
 				"cssls",
 				"lua_ls",
-				"pylsp",
+				"pyright",
 				"emmet_ls",
 			},
 			automatic_installation = true,
@@ -39,7 +39,7 @@ return {
 				"stylua", -- lua formatter
 				"isort", -- python formatter
 				"black", -- python formatter
-				--	"pylint", -- python linter
+				"pylint", -- python linter
 				"eslint_d", -- js linter
 			},
 		})
@@ -52,6 +52,9 @@ return {
 
 		lspconfig["cssls"].setup({})
 
+		lspconfig["pyright"].setup({})
+
+		--[[
 		lspconfig["pylsp"].setup({
 			settings = {
 				pylsp = {
@@ -64,6 +67,8 @@ return {
 				},
 			},
 		})
+		]]
+		--
 
 		-- Global mappings.
 		-- See `:help vim.diagnostic.*` for documentation on any of the below functions
