@@ -48,7 +48,7 @@ opts.desc = "Toggle the vim builtin spell-checker"
 map("n", "<leader>sp", ":set spell!<CR>", opts)
 
 opts.desc = "Toggle relative line numbering"
-map("n", "<leader>rn", ":set relativenumber!<CR>", opts)
+map("n", "<leader>rl", ":set relativenumber!<CR>", opts)
 
 opts.desc = "Delete the buffer while keeping the window open"
 map("n", "<leader>bd", ":bnext<CR>:bdelete #<CR>", opts)
