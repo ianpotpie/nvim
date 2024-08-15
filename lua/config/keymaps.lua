@@ -1,5 +1,19 @@
 local map = vim.keymap.set
-local opts = { noremap = true, silent = true }
+local opts = {
+	noremap = true,
+	silent = true,
+}
+
+local function concatMaps(mapA, mapB)
+	local newMap = {}
+	for k, v in pairs(mapA) do
+		newMap[k] = v
+	end
+	for k, v in pairs(mapB) do
+		newMap[k] = v
+	end
+	return newMap
+end
 
 -- setting the leader key
 map("", "<Space>", "<Nop>")
@@ -28,10 +42,10 @@ map("n", "<S-h>", ":bprevious<CR>", opts)
 
 -- Remap for dealing with word wrap
 opts.desc = "Move up a line (within wrap)"
-vim.keymap.set("n", "k", "v:count == 0 ? 'gk' : 'k'", { expr = true, silent = true })
+vim.keymap.set("n", "k", "v:count == 0 ? 'gk' : 'k'", concatMaps(opts, { expr = true }))
 
 opts.desc = "Move down a line (within wrap)"
-vim.keymap.set("n", "j", "v:count == 0 ? 'gj' : 'j'", { expr = true, silent = true })
+vim.keymap.set("n", "j", "v:count == 0 ? 'gj' : 'j'", concatMaps(opts, { expr = true }))
 
 -- Escape to clear highlights
 opts.desc = "Pass escape key and remove highlights"
@@ -56,7 +70,3 @@ map("n", "<leader>bd", ":bnext<CR>:bdelete #<CR>", opts)
 -- quickly exit insert mode in the terminal
 opts.desc = "Exit the terminal with <ESC>"
 map("t", "<ESC>", "<ESC><C-\\><C-N>", opts)
-
--- Copilot keymapping
-opts.desc = "Toggle Copilot Auto-Trigger"
-map("n", "<leader>cp", ":lua require('copilot.suggestion').toggle_auto_trigger()<CR>", opts)
