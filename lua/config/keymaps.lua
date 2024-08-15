@@ -20,18 +20,44 @@ map("", "<Space>", "<Nop>")
 vim.g.mapleader = " "
 vim.g.maplocalleader = " "
 
--- Resize with arrows
-opts.desc = "Increase window width"
+-- Resize windows with arrows
+opts.desc = "Increase window height"
 map("n", "<C-Up>", ":resize +2<CR>", opts)
 
-opts.desc = "Decrease window width"
+opts.desc = "Decrease window height"
 map("n", "<C-Down>", ":resize -2<CR>", opts)
 
-opts.desc = "Decrease window height"
+opts.desc = "Decrease window width"
 map("n", "<C-Left>", ":vertical resize -2<CR>", opts)
 
-opts.desc = "Increase window height"
+opts.desc = "Increase window width"
 map("n", "<C-Right>", ":vertical resize +2<CR>", opts)
+
+-- Navigate windows
+opts.desc = "Move to left window"
+map("n", "<C-h>", "<C-w>h", opts)
+
+opts.desc = "Move to lower window"
+map("n", "<C-j>", "<C-w>j", opts)
+
+opts.desc = "Move to upper window"
+map("n", "<C-k>", "<C-w>k", opts)
+
+opts.desc = "Move to right window"
+map("n", "<C-l>", "<C-w>l", opts)
+
+-- Other window commands
+opts.desc = "Split window vertically"
+map("n", "<leader>wv", "<C-w>v", opts)
+
+opts.desc = "Split window horizontally"
+map("n", "<leader>ws", "<C-w>s", opts)
+
+opts.desc = "Make split windows equal width & height"
+map("n", "<leader>we", "<C-w>=", opts)
+
+opts.desc = "Close curren split window"
+map("n", "<leader>wx", ":close<CR>", opts)
 
 -- Navigate buffers
 opts.desc = "Switch to next buffer"
@@ -65,7 +91,7 @@ opts.desc = "Toggle relative line numbering"
 map("n", "<leader>rl", ":set relativenumber!<CR>", opts)
 
 opts.desc = "Delete the buffer while keeping the window open"
-map("n", "<leader>bd", ":bnext<CR>:bdelete #<CR>", opts)
+map("n", "<leader>bd", ":bnext<CR>:bdelete! #<CR>", opts)
 
 -- quickly exit insert mode in the terminal
 opts.desc = "Exit the terminal with <ESC>"
