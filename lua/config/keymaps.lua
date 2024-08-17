@@ -58,3 +58,4 @@ map(
 
 -- quickly exit insert mode in the terminal
 map("t", "<ESC>", "<ESC><C-\\><C-N>", { desc = "Exit the terminal with <ESC>", silent = true })
+map("n", "<leader>sa", "gg<S-v><S-g>", { desc = "Select everything in the buffer", silent = true })
