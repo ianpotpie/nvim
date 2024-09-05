@@ -69,7 +69,7 @@ return {
 		end
 
 		--configure ocaml server
-		lspconfig["ocaml_ls"].setup({
+		lspconfig["ocamllsp"].setup({
 			capabilities = capabilities,
 			on_attach = on_attach,
 		})

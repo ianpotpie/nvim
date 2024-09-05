@@ -31,6 +31,7 @@ return {
 				"lua_ls", -- lua lsp
 				"pyright", -- python lsp
 				"emmet_ls", -- emmet lsp
+				"ocamllsp", -- ocaml lsp
 			},
 			automatic_installation = true,
 		})
@@ -51,6 +52,7 @@ return {
 		lspconfig["html"].setup({})
 		lspconfig["cssls"].setup({})
 		lspconfig["pyright"].setup({})
+		lspconfig["ocamllsp"].setup({})
 
 		-- Global mappings.
 		-- See `:help vim.diagnostic.*` for documentation on any of the below functions
