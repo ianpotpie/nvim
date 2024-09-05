@@ -68,6 +68,12 @@ return {
 			vim.fn.sign_define(hl, { text = icon, texthl = hl, numhl = "" })
 		end
 
+		--configure ocaml server
+		lspconfig["ocaml_ls"].setup({
+			capabilities = capabilities,
+			on_attach = on_attach,
+		})
+
 		--configure latex server
 		lspconfig["texlab"].setup({
 			capabilities = capabilities,
