@@ -25,7 +25,7 @@ return {
 
 		mason_lspconfig.setup({
 			ensure_installed = {
-				"tsserver", -- typescript/javascript lsp
+				"ts_ls", -- typescript/javascript lsp
 				"html", -- html lsp
 				"cssls", -- css lsp
 				"lua_ls", -- lua lsp
@@ -48,7 +48,7 @@ return {
 		})
 
 		lspconfig["texlab"].setup({})
-		lspconfig["tsserver"].setup({})
+		lspconfig["ts_ls"].setup({})
 		lspconfig["html"].setup({})
 		lspconfig["cssls"].setup({})
 		lspconfig["pyright"].setup({})
