@@ -1,16 +1,18 @@
 return {
-  'L3MON4D3/LuaSnip',
-  dependencies = {
-		'rafamadriz/friendly-snippets'
+	"L3MON4D3/LuaSnip",
+	dependencies = {
+		"rafamadriz/friendly-snippets",
 	},
 	config = function()
-		local luasnip = require('luasnip')
+		local luasnip = require("luasnip")
 
 		luasnip.config.set_config({
 			history = true,
-			updateevents = 'TextChanged, TextChangedI'
+			region_check_events = "InsertEnter",
+			delete_check_events = "TextChanges,InsertLeave",
+			update_events = "TextChanged, TextChangedI",
 		})
 
 		require("luasnip.loaders.from_vscode").load()
-	end
+	end,
 }
