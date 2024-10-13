@@ -9,7 +9,7 @@ return {
 		luasnip.config.set_config({
 			history = true,
 			region_check_events = "InsertEnter",
-			delete_check_events = "TextChanges,InsertLeave",
+			delete_check_events = "TextChanged, InsertLeave",
 			update_events = "TextChanged, TextChangedI",
 		})
 
